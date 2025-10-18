@@ -11,7 +11,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='merge sort works with unsorted integers (ascending)',
-        fail='merge sort failed to sort integers in ascending order.\nExpected: %s\nReceived: %s'
+        fail='merge sort failed to sort integers in ascending order.\nExpected: %s\nReceived %f'
     )
     def test_merge_sort_asc_integers(self):
         data = [5, 2, 8, 1, 9]
@@ -20,7 +20,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='merge sort works with unsorted integers (descending)',
-        fail='merge sort failed to sort integers in descending order.\nExpected: %s\nReceived: %s'
+        fail='merge sort failed to sort integers in descending order.\nExpected: %s\nReceived %f'
     )
     def test_merge_sort_desc_integers(self):
         data = [5, 2, 8, 1, 9]
@@ -29,7 +29,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='merge sort works with strings (alphabetical)',
-        fail='merge sort failed to sort strings alphabetically.\nExpected: %s\nReceived: %s'
+        fail='merge sort failed to sort strings alphabetically.\nExpected: %s\nReceived %f'
     )
     def test_merge_sort_strings(self):
         data = ['zebra', 'apple', 'banana', 'cherry']
@@ -52,7 +52,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='merge sort handles empty list',
-        fail='merge sort failed with empty list.\nExpected: %s\nReceived: %s'
+        fail='merge sort failed with empty list.\nExpected: %s\nReceived %f'
     )
     def test_merge_sort_empty(self):
         data = []
@@ -61,7 +61,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='merge sort handles single element',
-        fail='merge sort failed with single element.\nExpected: %s\nReceived: %s'
+        fail='merge sort failed with single element.\nExpected: %s\nReceived %f'
     )
     def test_merge_sort_single(self):
         data = [42]
@@ -70,7 +70,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='merge sort handles already sorted list',
-        fail='merge sort failed with already sorted list.\nExpected: %s\nReceived: %s'
+        fail='merge sort failed with already sorted list.\nExpected: %s\nReceived %f'
     )
     def test_merge_sort_already_sorted(self):
         data = [1, 2, 3, 4, 5]
@@ -79,7 +79,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='merge sort handles reverse sorted list',
-        fail='merge sort failed with reverse sorted list.\nExpected: %s\nReceived: %s'
+        fail='merge sort failed with reverse sorted list.\nExpected: %s\nReceived %f'
     )
     def test_merge_sort_reverse_sorted(self):
         data = [5, 4, 3, 2, 1]
@@ -88,7 +88,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='merge sort handles duplicate elements',
-        fail='merge sort failed with duplicate elements.\nExpected: %s\nReceived: %s'
+        fail='merge sort failed with duplicate elements.\nExpected: %s\nReceived %f'
     )
     def test_merge_sort_duplicates(self):
         data = [3, 1, 4, 1, 5, 9, 2, 6, 5]
@@ -97,7 +97,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='merge sort handles negative numbers',
-        fail='merge sort failed with negative numbers.\nExpected: %s\nReceived: %s'
+        fail='merge sort failed with negative numbers.\nExpected: %s\nReceived %f'
     )
     def test_merge_sort_negatives(self):
         data = [3, -1, 4, -5, 0, 2]
@@ -106,7 +106,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='merge sort handles floats',
-        fail='merge sort failed with floats.\nExpected: %s\nReceived: %s'
+        fail='merge sort failed with floats.\nExpected: %s\nReceived %f'
     )
     def test_merge_sort_floats(self):
         data = [3.5, 1.2, 4.7, 2.1]
@@ -119,7 +119,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='insertion sort works with unsorted integers (ascending)',
-        fail='insertion sort failed to sort integers in ascending order.\nExpected: %s\nReceived: %s'
+        fail='insertion sort failed to sort integers in ascending order.\nExpected: %s\nReceived %f'
     )
     def test_insertion_sort_asc_integers(self):
         data = [5, 2, 8, 1, 9]
@@ -128,7 +128,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='insertion sort works with unsorted integers (descending)',
-        fail='insertion sort failed to sort integers in descending order.\nExpected: %s\nReceived: %s'
+        fail='insertion sort failed to sort integers in descending order.\nExpected: %s\nReceived %f'
     )
     def test_insertion_sort_desc_integers(self):
         data = [5, 2, 8, 1, 9]
@@ -137,7 +137,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='insertion sort works with strings (alphabetical)',
-        fail='insertion sort failed to sort strings alphabetically.\nExpected: %s\nReceived: %s'
+        fail='insertion sort failed to sort strings alphabetically.\nExpected: %s\nReceived %f'
     )
     def test_insertion_sort_strings(self):
         data = ['zebra', 'apple', 'banana', 'cherry']
@@ -160,7 +160,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='insertion sort handles empty list',
-        fail='insertion sort failed with empty list.\nExpected: %s\nReceived: %s'
+        fail='insertion sort failed with empty list.\nExpected: %s\nReceived %f'
     )
     def test_insertion_sort_empty(self):
         data = []
@@ -169,7 +169,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='insertion sort handles single element',
-        fail='insertion sort failed with single element.\nExpected: %s\nReceived: %s'
+        fail='insertion sort failed with single element.\nExpected: %s\nReceived %f'
     )
     def test_insertion_sort_single(self):
         data = [42]
@@ -178,7 +178,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='insertion sort handles already sorted list',
-        fail='insertion sort failed with already sorted list.\nExpected: %s\nReceived: %s'
+        fail='insertion sort failed with already sorted list.\nExpected: %s\nReceived %f'
     )
     def test_insertion_sort_already_sorted(self):
         data = [1, 2, 3, 4, 5]
@@ -187,7 +187,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='insertion sort handles duplicate elements',
-        fail='insertion sort failed with duplicate elements.\nExpected: %s\nReceived: %s'
+        fail='insertion sort failed with duplicate elements.\nExpected: %s\nReceived %f'
     )
     def test_insertion_sort_duplicates(self):
         data = [3, 1, 4, 1, 5, 9, 2, 6, 5]
@@ -196,7 +196,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='insertion sort handles negative numbers',
-        fail='insertion sort failed with negative numbers.\nExpected: %s\nReceived: %s'
+        fail='insertion sort failed with negative numbers.\nExpected: %s\nReceived %f'
     )
     def test_insertion_sort_negatives(self):
         data = [3, -1, 4, -5, 0, 2]
@@ -209,7 +209,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='bubble sort works with unsorted integers (ascending)',
-        fail='bubble sort failed to sort integers in ascending order.\nExpected: %s\nReceived: %s'
+        fail='bubble sort failed to sort integers in ascending order.\nExpected: %s\nReceived %f'
     )
     def test_bubble_sort_asc_integers(self):
         data = [5, 2, 8, 1, 9]
@@ -218,7 +218,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='bubble sort works with unsorted integers (descending)',
-        fail='bubble sort failed to sort integers in descending order.\nExpected: %s\nReceived: %s'
+        fail='bubble sort failed to sort integers in descending order.\nExpected: %s\nReceived %f'
     )
     def test_bubble_sort_desc_integers(self):
         data = [5, 2, 8, 1, 9]
@@ -227,7 +227,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='bubble sort works with strings (alphabetical)',
-        fail='bubble sort failed to sort strings alphabetically.\nExpected: %s\nReceived: %s'
+        fail='bubble sort failed to sort strings alphabetically.\nExpected: %s\nReceived %f'
     )
     def test_bubble_sort_strings(self):
         data = ['zebra', 'apple', 'banana', 'cherry']
@@ -250,7 +250,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='bubble sort handles empty list',
-        fail='bubble sort failed with empty list.\nExpected: %s\nReceived: %s'
+        fail='bubble sort failed with empty list.\nExpected: %s\nReceived %f'
     )
     def test_bubble_sort_empty(self):
         data = []
@@ -259,7 +259,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='bubble sort handles single element',
-        fail='bubble sort failed with single element.\nExpected: %s\nReceived: %s'
+        fail='bubble sort failed with single element.\nExpected: %s\nReceived %f'
     )
     def test_bubble_sort_single(self):
         data = [42]
@@ -268,7 +268,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='bubble sort handles already sorted list',
-        fail='bubble sort failed with already sorted list.\nExpected: %s\nReceived: %s'
+        fail='bubble sort failed with already sorted list.\nExpected: %s\nReceived %f'
     )
     def test_bubble_sort_already_sorted(self):
         data = [1, 2, 3, 4, 5]
@@ -277,7 +277,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='bubble sort handles duplicate elements',
-        fail='bubble sort failed with duplicate elements.\nExpected: %s\nReceived: %s'
+        fail='bubble sort failed with duplicate elements.\nExpected: %s\nReceived %f'
     )
     def test_bubble_sort_duplicates(self):
         data = [3, 1, 4, 1, 5, 9, 2, 6, 5]
@@ -290,7 +290,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='sort method dispatches to merge sort correctly',
-        fail='sort method failed to dispatch to merge sort.\nExpected: %s\nReceived: %s'
+        fail='sort method failed to dispatch to merge sort.\nExpected: %s\nReceived %f'
     )
     def test_sort_method_merge(self):
         data = [5, 2, 8, 1, 9]
@@ -299,7 +299,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='sort method dispatches to insertion sort correctly',
-        fail='sort method failed to dispatch to insertion sort.\nExpected: %s\nReceived: %s'
+        fail='sort method failed to dispatch to insertion sort.\nExpected: %s\nReceived %f'
     )
     def test_sort_method_insertion(self):
         data = [5, 2, 8, 1, 9]
@@ -308,7 +308,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='sort method dispatches to bubble sort correctly',
-        fail='sort method failed to dispatch to bubble sort.\nExpected: %s\nReceived: %s'
+        fail='sort method failed to dispatch to bubble sort.\nExpected: %s\nReceived %f'
     )
     def test_sort_method_bubble(self):
         data = [5, 2, 8, 1, 9]
@@ -317,7 +317,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='sort method defaults to merge sort',
-        fail='sort method should default to merge sort.\nExpected: %s\nReceived: %s'
+        fail='sort method should default to merge sort.\nExpected: %s\nReceived %f'
     )
     def test_sort_method_default(self):
         data = [5, 2, 8, 1, 9]
@@ -326,7 +326,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='sort method is case-insensitive for method names',
-        fail='sort method should be case-insensitive.\nExpected: %s\nReceived: %s'
+        fail='sort method should be case-insensitive.\nExpected: %s\nReceived %f'
     )
     def test_sort_method_case_insensitive(self):
         data = [5, 2, 8, 1, 9]
@@ -380,7 +380,7 @@ class TestSorter(TestCase):
     
     @show_message(
         success='sort methods work with custom objects and comparators',
-        fail='sort methods should work with custom objects.\nExpected: %s\nReceived: %s'
+        fail='sort methods should work with custom objects.\nExpected: %s\nReceived %f'
     )
     def test_sort_custom_objects(self):
         data = [

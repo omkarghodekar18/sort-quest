@@ -10,7 +10,7 @@ class TestHelpers(TestCase):
     
     @show_message(
         success='number_asc works correctly with integers',
-        fail='number_asc failed with integers. Expected True when first number is smaller.\nExpected: %s\nReceived: %s'
+        fail='number_asc failed with integers. Expected True when first number is smaller.\nExpected: %s\nReceived %f'
     )
     def test_number_asc_integers(self):
         self.assert_equal(Helpers.number_asc(1, 2), True)
@@ -19,7 +19,7 @@ class TestHelpers(TestCase):
     
     @show_message(
         success='number_asc works correctly with floats',
-        fail='number_asc failed with floats.\nExpected: %s\nReceived: %s'
+        fail='number_asc failed with floats.\nExpected: %s\nReceived %f'
     )
     def test_number_asc_floats(self):
         self.assert_equal(Helpers.number_asc(1.5, 2.7), True)
@@ -28,7 +28,7 @@ class TestHelpers(TestCase):
     
     @show_message(
         success='number_asc works correctly with mixed int and float',
-        fail='number_asc failed with mixed types.\nExpected: %s\nReceived: %s'
+        fail='number_asc failed with mixed types.\nExpected: %s\nReceived %f'
     )
     def test_number_asc_mixed(self):
         self.assert_equal(Helpers.number_asc(1, 2.5), True)
@@ -36,7 +36,7 @@ class TestHelpers(TestCase):
     
     @show_message(
         success='number_asc works correctly with negative numbers',
-        fail='number_asc failed with negative numbers.\nExpected: %s\nReceived: %s'
+        fail='number_asc failed with negative numbers.\nExpected: %s\nReceived %f'
     )
     def test_number_asc_negatives(self):
         self.assert_equal(Helpers.number_asc(-5, -2), True)
@@ -45,7 +45,7 @@ class TestHelpers(TestCase):
     
     @show_message(
         success='number_asc works correctly with zero',
-        fail='number_asc failed with zero.\nExpected: %s\nReceived: %s'
+        fail='number_asc failed with zero.\nExpected: %s\nReceived %f'
     )
     def test_number_asc_zero(self):
         self.assert_equal(Helpers.number_asc(0, 1), True)
@@ -54,7 +54,7 @@ class TestHelpers(TestCase):
     
     @show_message(
         success='number_desc works correctly with integers',
-        fail='number_desc failed with integers. Expected True when first number is larger.\nExpected: %s\nReceived: %s'
+        fail='number_desc failed with integers. Expected True when first number is larger.\nExpected: %s\nReceived %f'
     )
     def test_number_desc_integers(self):
         self.assert_equal(Helpers.number_desc(2, 1), True)
@@ -63,7 +63,7 @@ class TestHelpers(TestCase):
     
     @show_message(
         success='number_desc works correctly with floats',
-        fail='number_desc failed with floats.\nExpected: %s\nReceived: %s'
+        fail='number_desc failed with floats.\nExpected: %s\nReceived %f'
     )
     def test_number_desc_floats(self):
         self.assert_equal(Helpers.number_desc(5.8, 2.3), True)
@@ -71,7 +71,7 @@ class TestHelpers(TestCase):
     
     @show_message(
         success='number_desc works correctly with negative numbers',
-        fail='number_desc failed with negative numbers.\nExpected: %s\nReceived: %s'
+        fail='number_desc failed with negative numbers.\nExpected: %s\nReceived %f'
     )
     def test_number_desc_negatives(self):
         self.assert_equal(Helpers.number_desc(-2, -5), True)
@@ -83,7 +83,7 @@ class TestHelpers(TestCase):
     
     @show_message(
         success='alpha_asc works correctly with lowercase strings',
-        fail='alpha_asc failed with lowercase strings.\nExpected: %s\nReceived: %s'
+        fail='alpha_asc failed with lowercase strings.\nExpected: %s\nReceived %f'
     )
     def test_alpha_asc_lowercase(self):
         self.assert_equal(Helpers.alpha_asc('apple', 'banana'), True)
@@ -92,7 +92,7 @@ class TestHelpers(TestCase):
     
     @show_message(
         success='alpha_asc is case-insensitive',
-        fail='alpha_asc should be case-insensitive but is not.\nExpected: %s\nReceived: %s'
+        fail='alpha_asc should be case-insensitive but is not.\nExpected: %s\nReceived %f'
     )
     def test_alpha_asc_case_insensitive(self):
         self.assert_equal(Helpers.alpha_asc('Apple', 'banana'), True)
@@ -101,7 +101,7 @@ class TestHelpers(TestCase):
     
     @show_message(
         success='alpha_asc works correctly with mixed case',
-        fail='alpha_asc failed with mixed case strings.\nExpected: %s\nReceived: %s'
+        fail='alpha_asc failed with mixed case strings.\nExpected: %s\nReceived %f'
     )
     def test_alpha_asc_mixed_case(self):
         self.assert_equal(Helpers.alpha_asc('AbC', 'aBd'), True)
@@ -109,7 +109,7 @@ class TestHelpers(TestCase):
     
     @show_message(
         success='alpha_asc works correctly with single characters',
-        fail='alpha_asc failed with single characters.\nExpected: %s\nReceived: %s'
+        fail='alpha_asc failed with single characters.\nExpected: %s\nReceived %f'
     )
     def test_alpha_asc_single_char(self):
         self.assert_equal(Helpers.alpha_asc('a', 'b'), True)
@@ -117,7 +117,7 @@ class TestHelpers(TestCase):
     
     @show_message(
         success='alpha_asc works correctly with empty strings',
-        fail='alpha_asc failed with empty strings.\nExpected: %s\nReceived: %s'
+        fail='alpha_asc failed with empty strings.\nExpected: %s\nReceived %f'
     )
     def test_alpha_asc_empty_strings(self):
         self.assert_equal(Helpers.alpha_asc('', 'a'), True)
@@ -126,7 +126,7 @@ class TestHelpers(TestCase):
     
     @show_message(
         success='alpha_desc works correctly with lowercase strings',
-        fail='alpha_desc failed with lowercase strings.\nExpected: %s\nReceived: %s'
+        fail='alpha_desc failed with lowercase strings.\nExpected: %s\nReceived %f'
     )
     def test_alpha_desc_lowercase(self):
         self.assert_equal(Helpers.alpha_desc('banana', 'apple'), True)
@@ -135,7 +135,7 @@ class TestHelpers(TestCase):
     
     @show_message(
         success='alpha_desc is case-insensitive',
-        fail='alpha_desc should be case-insensitive but is not.\nExpected: %s\nReceived: %s'
+        fail='alpha_desc should be case-insensitive but is not.\nExpected: %s\nReceived %f'
     )
     def test_alpha_desc_case_insensitive(self):
         self.assert_equal(Helpers.alpha_desc('Zebra', 'apple'), True)
@@ -147,7 +147,7 @@ class TestHelpers(TestCase):
     
     @show_message(
         success='length_asc works correctly with different length strings',
-        fail='length_asc failed. Expected True when first string is shorter.\nExpected: %s\nReceived: %s'
+        fail='length_asc failed. Expected True when first string is shorter.\nExpected: %s\nReceived %f'
     )
     def test_length_asc_basic(self):
         self.assert_equal(Helpers.length_asc('hi', 'hello'), True)
@@ -156,7 +156,7 @@ class TestHelpers(TestCase):
     
     @show_message(
         success='length_asc works correctly with empty strings',
-        fail='length_asc failed with empty strings.\nExpected: %s\nReceived: %s'
+        fail='length_asc failed with empty strings.\nExpected: %s\nReceived %f'
     )
     def test_length_asc_empty(self):
         self.assert_equal(Helpers.length_asc('', 'a'), True)
@@ -165,7 +165,7 @@ class TestHelpers(TestCase):
     
     @show_message(
         success='length_asc works correctly with very long strings',
-        fail='length_asc failed with very long strings.\nExpected: %s\nReceived: %s'
+        fail='length_asc failed with very long strings.\nExpected: %s\nReceived %f'
     )
     def test_length_asc_long_strings(self):
         short = 'a'
@@ -175,7 +175,7 @@ class TestHelpers(TestCase):
     
     @show_message(
         success='length_desc works correctly with different length strings',
-        fail='length_desc failed. Expected True when first string is longer.\nExpected: %s\nReceived: %s'
+        fail='length_desc failed. Expected True when first string is longer.\nExpected: %s\nReceived %f'
     )
     def test_length_desc_basic(self):
         self.assert_equal(Helpers.length_desc('hello', 'hi'), True)
@@ -184,7 +184,7 @@ class TestHelpers(TestCase):
     
     @show_message(
         success='length_desc works correctly with empty strings',
-        fail='length_desc failed with empty strings.\nExpected: %s\nReceived: %s'
+        fail='length_desc failed with empty strings.\nExpected: %s\nReceived %f'
     )
     def test_length_desc_empty(self):
         self.assert_equal(Helpers.length_desc('a', ''), True)
@@ -196,7 +196,7 @@ class TestHelpers(TestCase):
     
     @show_message(
         success='reverse correctly inverts number_asc comparator',
-        fail='reverse failed to invert number_asc.\nExpected: %s\nReceived: %s'
+        fail='reverse failed to invert number_asc.\nExpected: %s\nReceived %f'
     )
     def test_reverse_number_asc(self):
         reversed_comp = Helpers.reverse(Helpers.number_asc)
@@ -206,7 +206,7 @@ class TestHelpers(TestCase):
     
     @show_message(
         success='reverse correctly inverts alpha_asc comparator',
-        fail='reverse failed to invert alpha_asc.\nExpected: %s\nReceived: %s'
+        fail='reverse failed to invert alpha_asc.\nExpected: %s\nReceived %f'
     )
     def test_reverse_alpha_asc(self):
         reversed_comp = Helpers.reverse(Helpers.alpha_asc)
@@ -215,7 +215,7 @@ class TestHelpers(TestCase):
     
     @show_message(
         success='reverse correctly inverts length_asc comparator',
-        fail='reverse failed to invert length_asc.\nExpected: %s\nReceived: %s'
+        fail='reverse failed to invert length_asc.\nExpected: %s\nReceived %f'
     )
     def test_reverse_length_asc(self):
         reversed_comp = Helpers.reverse(Helpers.length_asc)
@@ -224,7 +224,7 @@ class TestHelpers(TestCase):
     
     @show_message(
         success='reverse works with custom comparator functions',
-        fail='reverse failed with custom comparator.\nExpected: %s\nReceived: %s'
+        fail='reverse failed with custom comparator.\nExpected: %s\nReceived %f'
     )
     def test_reverse_custom_comparator(self):
         # Custom comparator: checks if first element is even and second is odd
