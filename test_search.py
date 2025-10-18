@@ -12,7 +12,7 @@ class TestSearch(TestCase):
     
     @show_message(
         success='linear search finds element in list of integers',
-        fail='linear search failed to find element in integer list.\nExpected: %s\nReceived: %s'
+        fail='linear search failed to find element in integer list.\nExpected: %s\nReceived %f'
     )
     def test_linear_find_integer(self):
         data = [5, 3, 8, 1, 9, 2]
@@ -21,7 +21,7 @@ class TestSearch(TestCase):
     
     @show_message(
         success='linear search finds element in list of strings',
-        fail='linear search failed to find element in string list.\nExpected: %s\nReceived: %s'
+        fail='linear search failed to find element in string list.\nExpected: %s\nReceived %f'
     )
     def test_linear_find_string(self):
         data = ['apple', 'banana', 'cherry', 'date']
@@ -30,7 +30,7 @@ class TestSearch(TestCase):
     
     @show_message(
         success='linear search finds first element',
-        fail='linear search failed to find first element.\nExpected: %s\nReceived: %s'
+        fail='linear search failed to find first element.\nExpected: %s\nReceived %f'
     )
     def test_linear_find_first(self):
         data = [10, 20, 30, 40]
@@ -39,7 +39,7 @@ class TestSearch(TestCase):
     
     @show_message(
         success='linear search finds last element',
-        fail='linear search failed to find last element.\nExpected: %s\nReceived: %s'
+        fail='linear search failed to find last element.\nExpected: %s\nReceived %f'
     )
     def test_linear_find_last(self):
         data = [10, 20, 30, 40]
@@ -48,7 +48,7 @@ class TestSearch(TestCase):
     
     @show_message(
         success='linear search finds element in single-element list',
-        fail='linear search failed with single-element list.\nExpected: %s\nReceived: %s'
+        fail='linear search failed with single-element list.\nExpected: %s\nReceived %f'
     )
     def test_linear_single_element(self):
         data = [42]
@@ -77,7 +77,7 @@ class TestSearch(TestCase):
     
     @show_message(
         success='linear search finds first occurrence of duplicate',
-        fail='linear search should find first occurrence of duplicate.\nExpected: %s\nReceived: %s'
+        fail='linear search should find first occurrence of duplicate.\nExpected: %s\nReceived %f'
     )
     def test_linear_duplicate_elements(self):
         data = [1, 2, 3, 2, 4]
@@ -86,7 +86,7 @@ class TestSearch(TestCase):
     
     @show_message(
         success='linear search works with custom comparator',
-        fail='linear search failed with custom comparator.\nExpected: %s\nReceived: %s'
+        fail='linear search failed with custom comparator.\nExpected: %s\nReceived %f'
     )
     def test_linear_custom_comparator(self):
         data = [{'name': 'Alice', 'age': 25}, {'name': 'Bob', 'age': 30}]
@@ -95,7 +95,7 @@ class TestSearch(TestCase):
     
     @show_message(
         success='linear search works with floats',
-        fail='linear search failed with float values.\nExpected: %s\nReceived: %s'
+        fail='linear search failed with float values.\nExpected: %s\nReceived %f'
     )
     def test_linear_floats(self):
         data = [1.5, 2.7, 3.9, 4.2]
@@ -104,7 +104,7 @@ class TestSearch(TestCase):
     
     @show_message(
         success='linear search works with negative numbers',
-        fail='linear search failed with negative numbers.\nExpected: %s\nReceived: %s'
+        fail='linear search failed with negative numbers.\nExpected: %s\nReceived %f'
     )
     def test_linear_negative_numbers(self):
         data = [-5, -3, 0, 2, 4]
@@ -137,7 +137,7 @@ class TestSearch(TestCase):
     
     @show_message(
         success='binary search finds element in sorted list',
-        fail='binary search failed to find element in sorted list.\nExpected: %s\nReceived: %s'
+        fail='binary search failed to find element in sorted list.\nExpected: %s\nReceived %f'
     )
     def test_binary_find_middle(self):
         data = [1, 3, 5, 7, 9, 11, 13]
@@ -146,7 +146,7 @@ class TestSearch(TestCase):
     
     @show_message(
         success='binary search finds first element',
-        fail='binary search failed to find first element.\nExpected: %s\nReceived: %s'
+        fail='binary search failed to find first element.\nExpected: %s\nReceived %f'
     )
     def test_binary_find_first(self):
         data = [2, 4, 6, 8, 10]
@@ -155,7 +155,7 @@ class TestSearch(TestCase):
     
     @show_message(
         success='binary search finds last element',
-        fail='binary search failed to find last element.\nExpected: %s\nReceived: %s'
+        fail='binary search failed to find last element.\nExpected: %s\nReceived %f'
     )
     def test_binary_find_last(self):
         data = [2, 4, 6, 8, 10]
@@ -164,7 +164,7 @@ class TestSearch(TestCase):
     
     @show_message(
         success='binary search finds element in single-element list',
-        fail='binary search failed with single-element list.\nExpected: %s\nReceived: %s'
+        fail='binary search failed with single-element list.\nExpected: %s\nReceived %f'
     )
     def test_binary_single_element_found(self):
         data = [42]
@@ -173,7 +173,7 @@ class TestSearch(TestCase):
     
     @show_message(
         success='binary search works with two-element list',
-        fail='binary search failed with two-element list.\nExpected: %s\nReceived: %s'
+        fail='binary search failed with two-element list.\nExpected: %s\nReceived %f'
     )
     def test_binary_two_elements(self):
         data = [5, 10]
@@ -220,7 +220,7 @@ class TestSearch(TestCase):
     
     @show_message(
         success='binary search works with negative numbers',
-        fail='binary search failed with negative numbers.\nExpected: %s\nReceived: %s'
+        fail='binary search failed with negative numbers.\nExpected: %s\nReceived %f'
     )
     def test_binary_negative_numbers(self):
         data = [-10, -5, 0, 5, 10]
@@ -229,7 +229,7 @@ class TestSearch(TestCase):
     
     @show_message(
         success='binary search works with floats',
-        fail='binary search failed with floats.\nExpected: %s\nReceived: %s'
+        fail='binary search failed with floats.\nExpected: %s\nReceived %f'
     )
     def test_binary_floats(self):
         data = [1.1, 2.2, 3.3, 4.4, 5.5]
@@ -238,7 +238,7 @@ class TestSearch(TestCase):
     
     @show_message(
         success='binary search works with large sorted list',
-        fail='binary search failed with large sorted list.\nExpected: %s\nReceived: %s'
+        fail='binary search failed with large sorted list.\nExpected: %s\nReceived %f'
     )
     def test_binary_large_list(self):
         data = list(range(0, 1000, 2))  # [0, 2, 4, ..., 998]
@@ -247,7 +247,7 @@ class TestSearch(TestCase):
     
     @show_message(
         success='binary search works with strings using custom comparator',
-        fail='binary search failed with strings.\nExpected: %s\nReceived: %s'
+        fail='binary search failed with strings.\nExpected: %s\nReceived %f'
     )
     def test_binary_strings(self):
         data = ['apple', 'banana', 'cherry', 'date', 'grape']
